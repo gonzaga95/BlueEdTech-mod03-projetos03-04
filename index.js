@@ -9,6 +9,9 @@ import makeAuthFactory from './src/factories/auth.js';
 import swaggerUi from 'swagger-ui-express';
 import { swaggerDocumentation } from './swagger.js';
 
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 const connectionDb = new MongoDbConnection();
 connectionDb.connectDb();
 
@@ -38,5 +41,5 @@ app.use('/characters', characters.route());
 app.use('/users', user.route());
 
 app.listen(port, () => {
-    console.log(`Server rodando em: http://localhost:3000`);
+    console.log(`Server rodando em: ${port}`);
 });

@@ -15,7 +15,7 @@ export const swaggerDocumentation = {
             description: 'DEV API'
         },
         {
-            url: '',
+            url: 'https://gonzaga-rick-n-morty-api.herokuapp.com/',
             description: 'production API'
         }
     ],

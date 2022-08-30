@@ -1,5 +1,5 @@
 import { JwtHelper } from '../auth/jwt.js';
-import { UserRepositoryMongoDb } from '../database/repository/userRepository';
+import { UserRepository } from '../database/repository/userRepository.js';
 import { FindUserByIdUseCase } from '../services/usecases/user/findUserById.js';
 
 export async function authentication(req, res, next) {
@@ -9,7 +9,7 @@ export async function authentication(req, res, next) {
     try {
         const userData = jwt.verifyToken(token.slice(7));
 
-        const repository = new UserRepositoryMongoDb();
+        const repository = new UserRepository();
         const findUserById = new FindUserByIdUseCase(repository);
 
         await findUserById.execute(userData.data.id);

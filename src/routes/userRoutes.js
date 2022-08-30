@@ -1,4 +1,4 @@
-import { authentication } from '../middlewares/auth';
+import { authentication } from '../middlewares/auth.js';
 
 export class UserRoutes {
     constructor(controller, router) {
