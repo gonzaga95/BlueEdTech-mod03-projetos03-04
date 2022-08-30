@@ -197,6 +197,23 @@ export const swaggerDocumentation = {
                 description:
                     'Route responsible for logging in a registered user',
                 tags: ['auth'],
+                requestBody: {
+                    content: {
+                        'application/json': {
+                            schema: {
+                                $ref: '#components/schemas/postUsers'
+                            },
+                            examples: {
+                                user: {
+                                    value: {
+                                        email: '',
+                                        password: ''
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
                 responses: {
                     401: {
                         description: 'Invalid password'
