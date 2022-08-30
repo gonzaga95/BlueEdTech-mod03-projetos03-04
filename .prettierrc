@@ -1,0 +1,10 @@
+{
+  "tabWidth": 4,
+  "useTabs": false,
+  "semicolons": true,
+  "trailingComma": "none",
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "arrowParens": "always",
+  "printWidth": 80
+}
