@@ -10,6 +10,10 @@ Quem é que não gosta das maluquices de Rick and Morty, não é mesmo? Pensando
 - Tela de edição
 - Tela de exclusão de personagens
 
+### Swagger docs
+
+[https://gonzaga-rick-n-morty-api.herokuapp.com/api-docs/]
+
 ### Endpoints (4 pontos)
 
 - [POST] Criar usuários;
