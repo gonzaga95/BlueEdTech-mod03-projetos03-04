@@ -1,5 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 import { MongoDbConnection } from './src/database/mongoDB/connection/connect.js';
 import makeUserFactory from './src/factories/user.js';
@@ -9,16 +11,13 @@ import makeAuthFactory from './src/factories/auth.js';
 import swaggerUi from 'swagger-ui-express';
 import { swaggerDocumentation } from './swagger.js';
 
-import * as dotenv from 'dotenv';
-dotenv.config();
-
 const connectionDb = new MongoDbConnection();
 connectionDb.connectDb();
 
 const app = express();
 const router = express.Router();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 const characters = makeCharacterFactory(router);
 const user = makeUserFactory(router);
@@ -28,7 +27,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use(
-    '/docs',
+    '/api-docs',
     swaggerUi.serve,
     swaggerUi.setup(swaggerDocumentation, {
         swaggerOptions: {
