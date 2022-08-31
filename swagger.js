@@ -25,6 +25,11 @@ export const swaggerDocumentation = {
                 summary: 'List with all users',
                 description: 'Route responsible for listing all users',
                 tags: ['users'],
+                security: [
+                    {
+                        token: []
+                    }
+                ],
                 responses: {
                     404: {
                         description: 'Not Found'
