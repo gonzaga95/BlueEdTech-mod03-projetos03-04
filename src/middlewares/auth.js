@@ -3,10 +3,10 @@ import { UserRepository } from '../database/repository/userRepository.js';
 import { FindUserByIdUseCase } from '../services/usecases/user/findUserById.js';
 
 export async function authentication(req, res, next) {
-    const token = req.headers.authorization;
-    const jwt = new JwtHelper();
-
     try {
+        const token = req.headers.authorization;
+        const jwt = new JwtHelper();
+
         const userData = jwt.verifyToken(token.slice(7));
 
         const repository = new UserRepository();

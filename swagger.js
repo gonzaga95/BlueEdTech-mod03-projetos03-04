@@ -557,6 +557,16 @@ export const swaggerDocumentation = {
                     }
                 }
             }
+        },
+        securitySchemes: {
+            token: {
+                type: 'http',
+                scheme: 'bearer',
+                bearerFormat: 'jwt'
+            }
         }
+    },
+    security: {
+        token: []
     }
 };
