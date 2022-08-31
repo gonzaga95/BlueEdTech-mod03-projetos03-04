@@ -55,6 +55,11 @@ export const swaggerDocumentation = {
                 summary: 'Search for a user by ID',
                 description: 'Route responsible for searching for a user by ID',
                 tags: ['users'],
+                security: [
+                    {
+                        token: []
+                    }
+                ],
                 parameters: [
                     {
                         name: 'id',
