@@ -1,14 +1,4 @@
-# Projeto - Rick and Morty
-
-Quem é que não gosta das maluquices de Rick and Morty, não é mesmo? Pensando nesse tema o desafio aqui e desenvolver uma API totalmente do zero, que seja capaz de suprir o front-end, que é composto das seguintes telas:
-
-- Tela de login
-- Tela de cadastro de usuários
-- Tela de personagens
-- Tela de cadastro de personagens
-- Tela de personagens by id
-- Tela de edição
-- Tela de exclusão de personagens
+# Projeto 04
 
 ### Swagger docs
 
