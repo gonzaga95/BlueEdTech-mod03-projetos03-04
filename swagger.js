@@ -7,7 +7,7 @@ export const swaggerDocumentation = {
         contact: {
             email: 'gonzagas.dudu@gmail.com'
         },
-        version: '1.0.1'
+        version: '1.0.5'
     },
     servers: [
         {
